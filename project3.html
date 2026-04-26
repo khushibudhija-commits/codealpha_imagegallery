@@ -6,7 +6,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="navbar">
+    <div class="logo">Khushi</div>
 
+    <ul class="nav-links">
+      <li><a href="C:\Users\hp\codealpha_portfolio\Home.html">Home</a></li>
+      <li><a href="C:\Users\hp\codealpha_portfolio\About.html">About</a></li>
+      <li><a href="C:\Users\hp\codealpha_portfolio\project.html">Projects</a></li>
+      <li><a href="C:\Users\hp\codealpha_portfolio\contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle">&#9776;</div>
+  </header>
 <h1>Image Gallery</h1>
 
 <!-- Filter Buttons -->
@@ -47,6 +58,62 @@ justify-content: space-between;
       background: rgba(15, 23, 42, 0.8);
       backdrop-filter: blur(10px);
 }
+ /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 600;
+      color: #38bdf8;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #cbd5f5;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: #38bdf8;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+ 
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
 
 h1 {
   margin: 20px;
